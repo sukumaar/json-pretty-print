@@ -1,8 +1,5 @@
 name: Publish Docker image
-env:
-  DOCKER_NAMESPAE: sukumaar
-  DOCKER_REPO: json-pretty-print
-  
+ 
 on:
   release:
     types: [published]
@@ -45,6 +42,6 @@ jobs:
       - name: Generate artifact attestation
         uses: actions/attest-build-provenance@v2
         with:
-          subject-name: index.docker.io/{DOCKER_NAMESPACE}/{DOCKER_REPO}
+          subject-name: index.docker.io/sukumaar/json-pretty-print
           subject-digest: ${{ steps.push.outputs.digest }}
           push-to-registry: true
