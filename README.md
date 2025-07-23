@@ -1,4 +1,5 @@
 # json-pretty-print
+[![Docker Image](https://github.com/sukumaar/json-pretty-print/actions/workflows/docker-image.yml/badge.svg)](https://github.com/sukumaar/json-pretty-print/actions/workflows/docker-image.yml)
 
 ## What it is?
 This is simple go based dockerized app/tool that makes json look pretty
