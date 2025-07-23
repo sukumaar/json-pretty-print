@@ -7,6 +7,6 @@ COPY cmd ./cmd
 RUN CGO_ENABLED=0 go build -ldflags="-s -w" -o json-pretty-print ./cmd/app
 RUN upx json-pretty-print
 
-FROM gcr.io/distroless/static-debian12
+FROM gcr.io/distroless/static-debian12:nonroot
 COPY --from=BUILDER /src/json-pretty-print /json-pretty-print
 CMD ["/json-pretty-print"]
