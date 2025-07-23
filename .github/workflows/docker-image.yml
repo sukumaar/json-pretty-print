@@ -35,7 +35,7 @@ jobs:
         with:
           images: sukumaar/json-pretty-print
 
-      - name: Build and push
+      - name: Build and push Docker image
         id: push
         uses: docker/build-push-action@v6
         with:
